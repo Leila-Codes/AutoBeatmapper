@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>AutoBeatmapper - Beatsaber</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+	<style>
+		.bars-container {
+			width: 500px;
+			height: 500px;
+		}
+		.bar {
+			background-color: green;
+			transition: .1s;
+			height: 6.25%;
+		}
+		.bar p {
+			color: white;
+			text-align: center;
+			margin: 0 auto;
+		}
+		.note-block {
+			width: 20px;
+			height: 20px;
+		}
+		.blue-note {
+			background-color: cyan;
+		}
+		.red-note {
+			background-color: red;
+		}
+	</style>
+  </head>
+  <body>
+    <script src="script.js"></script>
+	<script src="player.js"></script>
+	<input type="file" id="musicInput" onchange="loadAudio(event)" />
+
+	<div class="bars-container">
+		<div id="bar1" class="bar"></div>
+		<div id="bar2" class="bar"></div>
+		<div id="bar3" class="bar"></div>
+		<div id="bar4" class="bar"></div>
+		<div id="bar5" class="bar"></div>
+		<div id="bar6" class="bar"></div>
+		<div id="bar7" class="bar"></div>
+		<div id="bar8" class="bar"></div>
+		<div id="bar9" class="bar"></div>
+		<div id="bar10" class="bar"></div>
+		<div id="bar11" class="bar"></div>
+		<div id="bar12" class="bar"></div>
+		<div id="bar13" class="bar"></div>
+		<div id="bar14" class="bar"></div>
+		<div id="bar15" class="bar"></div>
+		<div id="bar16" class="bar"></div>
+	</div>
+
+	<div class="notes-container">
+		<div class="note-block blue-note"></div>
+		<div class="note-block red-note"></div>
+	</div>
+
+  </body>
+</html>
