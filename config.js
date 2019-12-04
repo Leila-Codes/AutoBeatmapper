@@ -1,0 +1,13 @@
+const CONFIG = {
+	INSTRUMENT_SENSITIVITY: {
+		PERCUSSION: {
+			SNARE: 85,
+			KICK: 75,
+			TOM1: 60,
+			TOM2: 62,
+			TOM3: 70,
+			FLOOR_TOM: 75
+		}
+	},
+	COOLDOWN_PERIOD: 0.25
+}

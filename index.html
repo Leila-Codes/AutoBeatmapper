@@ -8,13 +8,39 @@
 
 	<style>
 		.bars-container {
-			width: 500px;
-			height: 500px;
+			width: 100%;
+			max-height: 100vh;
+			position: relative;
+			/*height: 500px;*/
 		}
-		.bar {
+		/*.bar {
 			background-color: green;
-			transition: .1s;
+			transition: .4s;
 			height: 6.25%;
+		}*/
+		.instrument-container {
+			width: 300px;
+			height: 25px;
+			position: relative;
+			margin: 0px 0px 0px 0px;
+			padding: 1px;
+			border: 1px dashed gray;
+			display: inline-block;
+		}
+		.instrument-current {
+			height: 100%;
+			background-color: green;
+			position: relative;
+			left: 0px;
+			/*transition: .25s;*/
+		}		
+		.instrument-threshold {
+			width: 2px;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			border-left: 2px dashed red;
+			display: inline-block;
 		}
 		.bar p {
 			color: white;
@@ -31,15 +57,37 @@
 		.red-note {
 			background-color: red;
 		}
+		em {
+			/*display: inline;
+			color: white;
+			position: relative;
+			left: 100%;
+			top: -18px;
+			margin: 6px 10px;*/
+			position: absolute;
+			left: 50%;
+			top: 10%;
+			transform: translate(-50%, 0%);
+			color: white;
+			z-index: 2;
+		}
 	</style>
   </head>
   <body>
+	<script src="utils.js"></script>
+	<script src="notes.js"></script>
+	<script src="instruments.js"></script>
+	<script src="patterns.js"></script>
+	<script src="config.js"></script>
     <script src="script.js"></script>
+	<script src="beatmap.js"></script>
 	<script src="player.js"></script>
 	<input type="file" id="musicInput" onchange="loadAudio(event)" />
 
-	<div class="bars-container">
-		<div id="bar1" class="bar"></div>
+	<div id="visualizer" class="bars-container">
+	</div>
+
+	<!--div id="bar1" class="bar"></div>
 		<div id="bar2" class="bar"></div>
 		<div id="bar3" class="bar"></div>
 		<div id="bar4" class="bar"></div>
@@ -54,13 +102,12 @@
 		<div id="bar13" class="bar"></div>
 		<div id="bar14" class="bar"></div>
 		<div id="bar15" class="bar"></div>
-		<div id="bar16" class="bar"></div>
-	</div>
+		<div id="bar16" class="bar"></div-->
 
-	<div class="notes-container">
+	<!--div class="notes-container">
 		<div class="note-block blue-note"></div>
 		<div class="note-block red-note"></div>
-	</div>
+	</div-->
 
   </body>
 </html>
